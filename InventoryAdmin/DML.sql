@@ -109,7 +109,7 @@ INSERT INTO ProductOrder (ProductID, OrderID, ProductQty) VALUES (6, 9, 1); -- C
 INSERT INTO ProductOrder (ProductID, OrderID, ProductQty) VALUES (8, 10, 1); -- Samsung Tab S7
 
 -- Generate 5 reviews by the above customers
-NSERT INTO Review (ReviewID, CustomerID, ProductID, Rating, ReviewText) VALUES (1, 1, 1, 5, 'Absolutely love my new iPhone! The camera is fantastic.');
+INSERT INTO Review (ReviewID, CustomerID, ProductID, Rating, ReviewText) VALUES (1, 1, 1, 5, 'Absolutely love my new iPhone! The camera is fantastic.');
 INSERT INTO Review (ReviewID, CustomerID, ProductID, Rating, ReviewText) VALUES (2, 2, 3, 4, 'HP Probook is reliable for my daily tasks, though a bit heavy.');
 INSERT INTO Review (ReviewID, CustomerID, ProductID, Rating, ReviewText) VALUES (3, 3, 5, 4, 'Nikon D3500 is perfect for beginners. Great value for money.');
 INSERT INTO Review (ReviewID, CustomerID, ProductID, Rating, ReviewText) VALUES (4, 4, 9, 5, 'The sound quality of Boat Earbuds 110 is clear and crisp. Love them for my workouts!');
