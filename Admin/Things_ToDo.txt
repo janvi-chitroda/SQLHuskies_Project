@@ -1,0 +1,28 @@
+StoredProcdures:
+    1. Stored procedure to add categories
+    2. Stored procedure to add suppliers
+    3. Stored procedure to add products
+    4. Stored procedure to add products to Warehouse(ProductSupplier table)
+    5. Stored procedure to add Customer (Customer table)
+    6. Stored procedure to add Address (Address table)
+
+    7. Stored procedure to add Order (CustomerOrder table) -- / Stored procedure to add ProductOrder (ProductOrder table) --
+        **update warehouse 
+        **check for Quantity should be greater than or equal to what customer is requesting
+    9. Stored procedure to add Review (Review table) --
+
+    Updations:
+    1. Update suppliers --
+    2. Update Quantity in Warehouse --
+    3. Update Customer
+    4. Update Address
+    5. Update Order (productOrder)
+        **update warehouse
+
+Functions:
+    1. Calculate invoice amount
+    2. Check for minimum stock 
+
+
+Doubts:
+    Availability status

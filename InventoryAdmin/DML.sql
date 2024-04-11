@@ -30,9 +30,9 @@ INSERT INTO Category (CategoryID, Name) VALUES (5, 'Audio');
 -- Inserting 5 supplier records
 INSERT INTO Supplier (SupplierID, SupplierName, SupplierLocation) VALUES (1, 'Apple', 'Cupertino');
 INSERT INTO Supplier (SupplierID, SupplierName, SupplierLocation) VALUES (2, 'HP', 'Palo Alto');
-INSERT INTO Supplier (SupplierID, SupplierName, SupplierLocation) VALUES (3, 'Boat', 'Delhi');
+INSERT INTO Supplier (SupplierID, SupplierName, SupplierLocation) VALUES (3, 'Boat', 'Mumbai');
 INSERT INTO Supplier (SupplierID, SupplierName, SupplierLocation) VALUES (4, 'Sony', 'Tokyo');
-INSERT INTO Supplier (SupplierID, SupplierName, SupplierLocation) VALUES (5, 'Nikon', 'Tokyo');
+INSERT INTO Supplier (SupplierID, SupplierName, SupplierLocation) VALUES (5, 'Nikon', 'Boston');
 
 -- Inserting 10 product records
 -- Phones
@@ -75,14 +75,14 @@ INSERT INTO Customer (CustomerID, FirstName, LastName, Email, Password, ContactN
 -- Inserting 10 addresses belonging to the 7 customers with different address types
 INSERT INTO Address (AddressID, AddressType, CustomerID, StreetName, UnitNumber, City, State, Country, ZipCode) VALUES (1, 'Home', 1, 'Maple Street', '101', 'Springfield', 'State1', 'CountryX', '12345');
 INSERT INTO Address (AddressID, AddressType, CustomerID, StreetName, UnitNumber, City, State, Country, ZipCode) VALUES (2, 'Work', 1, 'Oak Avenue', '201', 'Shelbyville', 'State2', 'CountryX', '23456');
-INSERT INTO Address (AddressID, AddressType, CustomerID, StreetName, UnitNumber, City, State, Country, ZipCode) VALUES (3, 'Home', 2, 'Pine Street', '102', 'Springfield', 'State1', 'CountryX', '12345');
+INSERT INTO Address (AddressID, AddressType, CustomerID, StreetName, UnitNumber, City, State, Country, ZipCode) VALUES (3, 'Alternate', 2, 'Pine Street', '102', 'Springfield', 'State1', 'CountryX', '12345');
 INSERT INTO Address (AddressID, AddressType, CustomerID, StreetName, UnitNumber, City, State, Country, ZipCode) VALUES (4, 'Work', 2, 'Elm Street', '202', 'Shelbyville', 'State2', 'CountryX', '23456');
 INSERT INTO Address (AddressID, AddressType, CustomerID, StreetName, UnitNumber, City, State, Country, ZipCode) VALUES (5, 'Home', 3, 'Birch Street', '103', 'Springfield', 'State1', 'CountryX', '12345');
-INSERT INTO Address (AddressID, AddressType, CustomerID, StreetName, UnitNumber, City, State, Country, ZipCode) VALUES (6, 'Work', 4, 'Cedar Avenue', '203', 'Shelbyville', 'State2', 'CountryX', '23456');
-INSERT INTO Address (AddressID, AddressType, CustomerID, StreetName, UnitNumber, City, State, Country, ZipCode) VALUES (7, 'Home', 5, 'Maple Street', '104', 'Springfield', 'State1', 'CountryX', '12345');
+INSERT INTO Address (AddressID, AddressType, CustomerID, StreetName, UnitNumber, City, State, Country, ZipCode) VALUES (6, 'Alternate', 4, 'Cedar Avenue', '203', 'Shelbyville', 'State2', 'CountryX', '23456');
+INSERT INTO Address (AddressID, AddressType, CustomerID, StreetName, UnitNumber, City, State, Country, ZipCode) VALUES (7, 'Alternate', 5, 'Maple Street', '104', 'Springfield', 'State1', 'CountryX', '12345');
 INSERT INTO Address (AddressID, AddressType, CustomerID, StreetName, UnitNumber, City, State, Country, ZipCode) VALUES (8, 'Work', 6, 'Oak Avenue', '204', 'Shelbyville', 'State2', 'CountryX', '23456');
 INSERT INTO Address (AddressID, AddressType, CustomerID, StreetName, UnitNumber, City, State, Country, ZipCode) VALUES (9, 'Home', 7, 'Pine Street', '105', 'Springfield', 'State1', 'CountryX', '12345');
-INSERT INTO Address (AddressID, AddressType, CustomerID, StreetName, UnitNumber, City, State, Country, ZipCode) VALUES (10, 'Work', 7, 'Elm Street', '205', 'Shelbyville', 'State2', 'CountryX', '23456');
+INSERT INTO Address (AddressID, AddressType, CustomerID, StreetName, UnitNumber, City, State, Country, ZipCode) VALUES (10, 'Alternate', 7, 'Elm Street', '205', 'Shelbyville', 'State2', 'CountryX', '23456');
 
 -- Generate 10 orders by the above customers
 INSERT INTO CustomerOrder (OrderID, CustomerID, OrderDate, InvoiceAmount) VALUES (1, 1, DATE '2023-09-15', 1200.000);
