@@ -63,7 +63,7 @@ CREATE SEQUENCE CustomerOrderSeq START WITH 1 INCREMENT BY 1;
 -- Create tables
 CREATE TABLE Product (
    ProductID NUMBER(10) NOT NULL PRIMARY KEY,
-   ProductName VARCHAR2(20) NOT NULL ,
+   ProductName VARCHAR2(20) NOT NULL UNIQUE,
    Category NUMBER(10) NOT NULL ,
    Price NUMBER(10,3) NOT NULL ,
    Description VARCHAR2(300) NOT NULL ,
@@ -98,7 +98,7 @@ CREATE TABLE Customer (
 
 CREATE TABLE Address (
    AddressID NUMBER(10)  NOT NULL PRIMARY KEY,
-   AddressType VARCHAR2(20) NOT NULL ,
+   AddressType VARCHAR2(20) NOT NULL CHECK (AddressType IN ('Home', 'Work', 'Alternate')),
    CustomerID NUMBER(10) NOT NULL ,
    StreetName VARCHAR2(40) NOT NULL ,
    UnitNumber VARCHAR2(20) NOT NULL ,
@@ -109,16 +109,16 @@ CREATE TABLE Address (
 );
 
 CREATE TABLE Review (
-   ReviewID NUMBER(10) NOT NULL  PRIMARY KEY,
-   CustomerID NUMBER(10) NOT NULL ,
-   ProductID NUMBER(10) NOT NULL ,
-   Rating NUMBER(10) NOT NULL ,
-   ReviewText VARCHAR2(100) NOT NULL 
+   ReviewID NUMBER(10) NOT NULL PRIMARY KEY,
+   CustomerID NUMBER(10) NOT NULL,
+   ProductID NUMBER(10) NOT NULL,
+   Rating NUMBER(10) NOT NULL CHECK (Rating IN (1, 2, 3, 4, 5)),
+   ReviewText VARCHAR2(100) NOT NULL
 );
 
 CREATE TABLE Supplier (
    SupplierID NUMBER(10) NOT NULL  PRIMARY KEY,
-   SupplierName VARCHAR2(20) NOT NULL ,
+   SupplierName VARCHAR2(20) NOT NULL UNIQUE,
    SupplierLocation VARCHAR2(20) NOT NULL 
 );
 
