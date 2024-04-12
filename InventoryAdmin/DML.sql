@@ -114,3 +114,5 @@ INSERT INTO Review (ReviewID, CustomerID, ProductID, Rating, ReviewText) VALUES 
 INSERT INTO Review (ReviewID, CustomerID, ProductID, Rating, ReviewText) VALUES (3, 3, 5, 4, 'Nikon D3500 is perfect for beginners. Great value for money.');
 INSERT INTO Review (ReviewID, CustomerID, ProductID, Rating, ReviewText) VALUES (4, 4, 9, 5, 'The sound quality of Boat Earbuds 110 is clear and crisp. Love them for my workouts!');
 INSERT INTO Review (ReviewID, CustomerID, ProductID, Rating, ReviewText) VALUES (5, 5, 10, 5, 'Sony WH-1000XM4 has the best noise cancellation. Worth every penny.');
+
+

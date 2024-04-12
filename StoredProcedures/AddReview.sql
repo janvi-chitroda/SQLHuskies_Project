@@ -1,7 +1,7 @@
 ---------- Stored procedure to add Review (Review table)
 CREATE OR REPLACE PROCEDURE ADD_REVIEW (
     PI_CUSTOMER_EMAIL Customer.Email%TYPE,
-    PI_PRODUCT_NAME Product.Name%TYPE,
+    PI_PRODUCT_NAME Product.ProductName%TYPE,
     PI_RATING Review.Rating%TYPE,
     PI_REVIEW_TEXT Review.ReviewText%TYPE
 ) AS
@@ -22,16 +22,20 @@ BEGIN
         RAISE_APPLICATION_ERROR(-20002, 'Product name cannot be null.');
     END IF;
 
-    -- Get the CustomerID based on the provided email address
-    SELECT CustomerID INTO V_CUSTOMER_ID FROM Customer WHERE Email = PI_CUSTOMER_EMAIL;
+    -- Get the CustomerID based on the provided email address, converting to lower case for case-insensitive comparison
+    SELECT CustomerID INTO V_CUSTOMER_ID
+    FROM Customer
+    WHERE LOWER(Email) = LOWER(PI_CUSTOMER_EMAIL);
 
     -- Check if the customer exists
     IF V_CUSTOMER_ID IS NULL THEN
         RAISE E_CUSTOMER_NOT_FOUND;
     END IF;
 
-    -- Get the ProductID based on the provided product name
-    SELECT ProductID INTO V_PRODUCT_ID FROM Product WHERE Name = PI_PRODUCT_NAME;
+    -- Get the ProductID based on the provided product name, converting to lower case for case-insensitive comparison
+    SELECT ProductID INTO V_PRODUCT_ID
+    FROM Product
+    WHERE LOWER(ProductName) = LOWER(PI_PRODUCT_NAME);
 
     -- Check if the product exists
     IF V_PRODUCT_ID IS NULL THEN
