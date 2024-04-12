@@ -25,24 +25,24 @@ EXEC ADD_SUPPLIER('Nikon', 'Boston');
 
 -- Execute the ADD_PRODUCT stored procedure for each product record
 -- Phones
-EXEC ADD_PRODUCT_T('iPhone 15', 'Phone', 999.999, 'Latest iPhone model', 20);
-EXEC ADD_PRODUCT_T('Samsung Galaxy S22', 'Phone', 899.999, 'Latest Galaxy model', 20);
+EXEC ADD_PRODUCT('iPhone 15', 'Phone', 999.999, 'Latest iPhone model', 20);
+EXEC ADD_PRODUCT('Samsung Galaxy S22', 'Phone', 899.999, 'Latest Galaxy model', 20);
 
 -- Laptops
-EXEC ADD_PRODUCT_T('HP Probook', 'Laptop', 599.999, 'Reliable business laptop', 15);
-EXEC ADD_PRODUCT_T('MacBook Air', 'Laptop', 999.999, 'Lightweight and powerful', 15);
+EXEC ADD_PRODUCT('HP Probook', 'Laptop', 599.999, 'Reliable business laptop', 15);
+EXEC ADD_PRODUCT('MacBook Air', 'Laptop', 999.999, 'Lightweight and powerful', 15);
 
 -- Cameras
-EXEC ADD_PRODUCT_T('Nikon D3500', 'Camera', 449.999, 'Great for beginners', 10);
-EXEC ADD_PRODUCT_T('Canon EOS Rebel', 'Camera', 499.999, 'Versatile DSLR', 10);
+EXEC ADD_PRODUCT('Nikon D3500', 'Camera', 449.999, 'Great for beginners', 10);
+EXEC ADD_PRODUCT('Canon EOS Rebel', 'Camera', 499.999, 'Versatile DSLR', 10);
 
 -- Tablets
-EXEC ADD_PRODUCT_T('iPad Pro', 'Tablet', 799.999, 'Powerful performance', 20);
-EXEC ADD_PRODUCT_T('Samsung Tab S7', 'Tablet', 649.999, 'High-resolution screen', 20);
+EXEC ADD_PRODUCT('iPad Pro', 'Tablet', 799.999, 'Powerful performance', 20);
+EXEC ADD_PRODUCT('Samsung Tab S7', 'Tablet', 649.999, 'High-resolution screen', 20);
 
 -- Audio
-EXEC ADD_PRODUCT_T('Boat Earbuds 110', 'Audio', 49.999, 'Clear sound, noise cancellation', 30);
-EXEC ADD_PRODUCT_T('Sony WH-1000XM4', 'Audio', 349.999, 'Industry-leading noise cancellation', 30);
+EXEC ADD_PRODUCT('Boat Earbuds 110', 'Audio', 49.999, 'Clear sound, noise cancellation', 30);
+EXEC ADD_PRODUCT('Sony WH-1000XM4', 'Audio', 349.999, 'Industry-leading noise cancellation', 30);
 
 -- Execute the INSERT_DATA_TO_WAREHOUSE stored procedure for each warehouse record
 EXEC INSERT_DATA_TO_WAREHOUSE('iPhone 15', 'Apple', 40);
@@ -80,6 +80,10 @@ EXEC ADD_ADDRESS('Alternate', 'olivertaylor@email.com', 'Elm Street', '205', 'Sh
 
 -- Execute the ADD_CUSTOMERORDER procedure for each address record
 EXECUTE Add_Customer_Order('johndoe@email.com', 'Iphone 15', 1, SYSDATE, 100.00);
+EXECUTE Add_Customer_Order('janesmith@email.com', 'Samsung Galaxy S22', 3, SYSDATE, 700.00);
+EXECUTE Add_Customer_Order('michaelbrown@email.com', 'Macbook Air', 4, SYSDATE, 200.00);
+EXECUTE Add_Customer_Order('williamwilson@email.com', 'Nikon D3500', 5, SYSDATE, 900.00);
+EXECUTE Add_Customer_Order('williamwilson@email.com', 'Canon Eos Rebel', 3, SYSDATE, 1000.00);
 
 -- Execute the ADD_REVIEW procedure for each review record    
 EXEC ADD_REVIEW('johndoe@email.com', 'iPhone 15', 5, 'Absolutely love my new iPhone! The camera is fantastic.');

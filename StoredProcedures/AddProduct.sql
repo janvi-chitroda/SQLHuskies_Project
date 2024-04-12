@@ -1,5 +1,5 @@
 ---------- Stored procedure to add products
-CREATE OR REPLACE PROCEDURE ADD_PRODUCT_T (
+CREATE OR REPLACE PROCEDURE ADD_PRODUCT (
     PI_PRODUCT_NAME Product.ProductName%TYPE,
     PI_CATEGORY_TITLE VARCHAR, -- Parameter for category title
     PI_PRICE Product.Price%TYPE,
@@ -84,5 +84,5 @@ EXCEPTION
     WHEN OTHERS THEN
         ROLLBACK;
         DBMS_OUTPUT.PUT_LINE('Unexpected error: ' || SQLERRM);
-END ADD_PRODUCT_T;
+END ADD_PRODUCT;
 /
