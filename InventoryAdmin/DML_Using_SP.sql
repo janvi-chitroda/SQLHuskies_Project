@@ -78,8 +78,8 @@ EXEC ADD_ADDRESS('Home', 'olivertaylor@email.com', 'Pine Street', '105', 'Spring
 EXEC ADD_ADDRESS('Alternate', 'olivertaylor@email.com', 'Elm Street', '205', 'Shelbyville', 'State2', 'CountryX', '23456');
 
 
--- Execute the ADD_ORDER procedure for each address record    
--- Execute the ADD_CUSTOMERORDER procedure for each address record   
+-- Execute the ADD_CUSTOMERORDER procedure for each address record
+EXECUTE Add_Customer_Order('johndoe@email.com', 'Iphone 15', 1, SYSDATE, 100.00);
 
 -- Execute the ADD_REVIEW procedure for each review record    
 EXEC ADD_REVIEW('johndoe@email.com', 'iPhone 15', 5, 'Absolutely love my new iPhone! The camera is fantastic.');
