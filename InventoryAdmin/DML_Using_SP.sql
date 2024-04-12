@@ -98,3 +98,6 @@ select * from supplier;
 select * from product;
 select * from warehouse;
 select * from customer;
+select * from address;
+select * from customerorder;
+select * from review;
