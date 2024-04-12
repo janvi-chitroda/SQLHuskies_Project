@@ -23,12 +23,15 @@ BEGIN
         RAISE_APPLICATION_ERROR(-20001, 'Not enough stock in the warehouse');
     END IF;
 
+    -- Calculate the invoice amount
+    v_invoiceamount := CalculateInvoiceAmount(v_productid, p_qty);
+
     -- Get the next ORDERID from the sequence
     SELECT CustomerOrderSeq.NEXTVAL INTO v_orderid FROM DUAL;
 
     -- Add the order
     INSERT INTO CUSTOMERORDER (ORDERID, CUSTOMERID, ORDERDATE, INVOICEAMOUNT)
-    VALUES (v_orderid, v_customerid, p_orderdate, p_invoiceamount);
+    VALUES (v_orderid, v_customerid, p_orderdate, v_invoiceamount);
 
     -- Deduct the quantity from the warehouse
     UPDATE WAREHOUSE SET PRODUCTQTY = PRODUCTQTY - p_qty WHERE PRODUCTID = v_productid;
