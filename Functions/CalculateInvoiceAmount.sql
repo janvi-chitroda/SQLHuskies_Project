@@ -15,3 +15,5 @@ EXCEPTION
     WHEN OTHERS THEN
         RAISE;
 END CalculateInvoiceAmount;
+
+SELECT CalculateInvoiceAmount(1, 10) AS InvoiceAmount FROM dual;
